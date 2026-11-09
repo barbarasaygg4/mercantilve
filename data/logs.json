@@ -1,0 +1,74 @@
+[
+    {
+        "ts": "2026-10-03 17:32:31",
+        "accion": "login_panel",
+        "detalle": "afsfa222",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 17:33:34",
+        "accion": "login",
+        "detalle": "hzjzjzjzjz / hzhzhzhzj @ 186.167.162.93",
+        "ip": "186.167.162.93"
+    },
+    {
+        "ts": "2026-10-03 17:58:38",
+        "accion": "login_fallido",
+        "detalle": "Masterpo2000 @ 103.219.169.5",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 17:59:57",
+        "accion": "login_fallido",
+        "detalle": "admin @ 103.219.169.5",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:23",
+        "accion": "login_panel",
+        "detalle": "Masterpo2000",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:23",
+        "accion": "login_fallido",
+        "detalle": "Masterpo2000 @ 103.219.169.5",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:33",
+        "accion": "login_panel",
+        "detalle": "Masterpo2000",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:47",
+        "accion": "guardar_config",
+        "detalle": "token/chat actualizados",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:55",
+        "accion": "guardar_config",
+        "detalle": "token/chat actualizados",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:03:58",
+        "accion": "purgar",
+        "detalle": "sesiones",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:04:35",
+        "accion": "guardar_config",
+        "detalle": "token/chat actualizados",
+        "ip": "103.219.169.5"
+    },
+    {
+        "ts": "2026-10-03 18:04:35",
+        "accion": "guardar_config",
+        "detalle": "token/chat actualizados",
+        "ip": "103.219.169.5"
+    }
+]

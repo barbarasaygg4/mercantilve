@@ -1,0 +1,14 @@
+[
+    {
+        "ts": "2026-10-03 17:31:48",
+        "ip": "103.219.169.5",
+        "motivo": "geo_bloqueado:CO",
+        "pais": "CO",
+        "ciudad": "Bogotá",
+        "isp": "Latitude.sh",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)",
+        "ruta": "/merca/acciones.php?accion=enviar",
+        "metodo": "POST",
+        "accion": "enviar"
+    }
+]

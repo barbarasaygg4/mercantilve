@@ -1,0 +1,24 @@
+<svg id="Cerrar-sesion" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#009fda"/>
+      <stop offset="1" stop-color="#004e9b"/>
+    </linearGradient>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fae61a"/>
+      <stop offset="1" stop-color="#ff5800"/>
+    </radialGradient>
+  </defs>
+  <circle id="Elipse_40" data-name="Elipse 40" cx="30" cy="30" r="30" fill="#004e9b"/>
+  <circle id="Elipse_41" data-name="Elipse 41" cx="28" cy="28" r="28" transform="translate(2 2)" fill="#fff"/>
+  <g id="Grupo_53" data-name="Grupo 53" transform="translate(10 10)">
+    <circle id="Elipse_79" data-name="Elipse 79" cx="20" cy="20" r="20" transform="translate(1)" fill="url(#linear-gradient)"/>
+    <circle id="Elipse_80" data-name="Elipse 80" cx="18" cy="18" r="18" transform="translate(3 2)" fill="#fff"/>
+    <g id="Grupo_53-2" data-name="Grupo 53" transform="translate(3 2)">
+      <path id="Trazado_46" data-name="Trazado 46" d="M18,0A18,18,0,1,1,0,18,18,18,0,0,1,18,0Z" fill="url(#radial-gradient)"/>
+      <path id="Sustracción_3" data-name="Sustracción 3" d="M18,36A18,18,0,0,1,5.272,5.272,17.882,17.882,0,0,1,18,0V18H36A18,18,0,0,1,18,36Z" transform="translate(0 0)" fill="#fff"/>
+    </g>
+    <rect id="Rectángulo_127" data-name="Rectángulo 127" width="12" height="10" transform="translate(1 15)" fill="#fff"/>
+    <path id="Unión_4" data-name="Unión 4" d="M0,6V0H6V2H2V6Z" transform="matrix(0.94, 0.342, -0.342, 0.94, 2.052, 24.155)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
